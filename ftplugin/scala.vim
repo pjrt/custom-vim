@@ -12,6 +12,7 @@ function! GetPackageForFile()
                 \   [ '/src/multi-jvm/scala', '/src/multi-jvm/scala' ],
                 \   [ '/app/model/scala',     '/app/model/scala' ],
                 \   [ '/app/controllers',     '/app' ],
+                \   [ '/app/com',             '/app' ],
                 \   [ '/test/scala',          '/test/scala' ]
                 \ ]
     return _GetPackageForFile(regexes)
