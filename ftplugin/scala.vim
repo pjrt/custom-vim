@@ -4,6 +4,10 @@ set errorformat+=%-G%.%#
 noremap <silent> <Leader>ff :cf /tmp/sbt.quickfix<CR>
 noremap <silent> <Leader>fn :cn<CR>
 
+" Search local or project for the class, trait, val or def under the cursor
+nnoremap <silent><space>f /\(def\\|val\\|class\\|trait\\|object\) <C-r><C-w>/I<cr>
+nnoremap <silent><space>gf :Unite -buffer-name=ack grep:.::(def\|class\|trait\|object)\ <C-r><C-w><cr>
+
 function! GetPackageForFile()
     let regexes = [
                 \   [ '/src/main/scala',      '/src/main/scala' ],
