@@ -17,6 +17,7 @@ function! GetPackageForFile()
                 \   [ '/app/model/scala',     '/app/model/scala' ],
                 \   [ '/app/controllers',     '/app' ],
                 \   [ '/app/com',             '/app' ],
+                \   [ '/test/com',            '/test' ],
                 \   [ '/test/scala',          '/test/scala' ]
                 \ ]
     return _GetPackageForFile(regexes)
