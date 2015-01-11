@@ -1,7 +1,7 @@
 set errorformat=%E\ %#[error]\ %#%f:%l:\ %m,%-C\ %#[error]\ %m,%-Z\ %#[error]\ %p^
 set errorformat+=%W\ %#[warn]\ %#%f:%l:\ %m,%-C\ %#[warn]\ %m,%-Z\ %#[warn]\ %p^
 set errorformat+=%-G%.%#
-noremap <silent> <Leader>ff :cf /tmp/sbt.quickfix<CR>
+noremap <silent> <Leader>ff :cf .git/sbt.quickfix<CR>
 noremap <silent> <Leader>fn :cn<CR>
 
 " Search local or project for the class, trait, val or def under the cursor
