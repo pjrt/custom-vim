@@ -5,8 +5,9 @@ set errorformat+=%E%f:%l:%c:\ %m,%C%m
 set errorformat+=%W%f:%l:%c:\ Warning:,%C%m
 
 nnoremap <Leader>m :w<CR>:make<CR>
-noremap <silent> <Leader>ff :cf .git/cabal.quickfix<CR>
-noremap <silent> <Leader>fn :cn<CR>
+nnoremap <silent> <Leader>ff :cf .git/cabal.quickfix<CR>
+nnoremap <silent> <Leader>fn :cn<CR>
+nnoremap <silent> <space>hh :exec "!hlint src > .git/cabal.quickfix"<CR>
 
 set wildignore+=*/cabal-dev/*,*/dist/*,*.hi
 
