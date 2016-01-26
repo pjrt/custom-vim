@@ -1,5 +1,3 @@
-set omnifunc=necoghc#omnifunc
-
 set errorformat=%E%f:%l:%c:,%C%m
 set errorformat+=%E%f:%l:%c:\ %m,%C%m
 set errorformat+=%W%f:%l:%c:\ Warning:,%C%m

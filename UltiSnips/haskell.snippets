@@ -1,8 +1,12 @@
 #module
-snippet module "new Module" b
+snippet module "New Module" b
 module `!v GetPackageForFile()`.`!v Classname()` where
 endsnippet
 
 snippet lang "LANGUAGE pragma" b
 {-# LANGUAGE ${1:ext} #-}
+endsnippet
+
+snippet iq "Import qualified" b
+import qualified ${1:module} as ${2:X}
 endsnippet
