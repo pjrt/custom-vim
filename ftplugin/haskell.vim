@@ -7,7 +7,7 @@ nnoremap <silent> <Leader>ff :cf .git/cabal.quickfix<CR>
 nnoremap <silent> <Leader>fn :cn<CR>
 nnoremap <silent> <space>hh :exec "!hlint src \| tee .git/cabal.quickfix"<CR>
 
-set wildignore+=*/cabal-dev/*,*/dist/*,*.hi
+set wildignore+=*/cabal-dev/*,*/dist/*,*.hi,.stack-work/*
 
 " Search local or project for the class, trait, val or def under the cursor
 nnoremap <silent><space>f /\(data\\|type\\|class) \<<C-r><C-w>\>/I<cr>
@@ -15,8 +15,11 @@ nnoremap <silent><space>gf :Unite -buffer-name=ack grep:.::(data\|type\|class)\ 
 
 function! GetPackageForFile()
     let regexes = [
-                \   [ '/src',      '/src' ],
-                \   [ '/test',      '/test' ],
+                \   [ '/src/test',    '/src/test' ],
+                \   [ '/src/lib',     '/src/lib' ],
+                \   [ '/src/service', '/src/service' ],
+                \   [ '/src',         '/src' ],
+                \   [ '/test',        '/test' ],
                 \ ]
     return _GetPackageForFile(regexes)
 endfunction
