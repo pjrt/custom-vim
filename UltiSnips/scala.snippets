@@ -27,3 +27,13 @@ endsnippet
 snippet def "A private final def" b
 private final def 
 endsnippet
+
+snippet typeclass "A scala typeclass" b
+trait $1 {
+	def $2
+}
+
+object $1 {
+	def apply[A](implicit ev: $1[A]) = ev
+}
+endsnippet
