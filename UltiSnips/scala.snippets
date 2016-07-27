@@ -29,11 +29,11 @@ private final def
 endsnippet
 
 snippet typeclass "A scala typeclass" b
-trait $1 {
-	def $2
+trait $1[$2] {
+	def $3
 }
 
 object $1 {
-	def apply[A](implicit ev: $1[A]) = ev
+	def apply[$2](implicit ev: $1[$2]) = ev
 }
 endsnippet
