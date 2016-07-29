@@ -34,6 +34,10 @@ trait $1[$2] {
 }
 
 object $1 {
-	def apply[$2](implicit ev: $1[$2]) = ev
+	def apply[$2](implicit ev: $1[$2]): $1[$2] = ev
 }
+endsnippet
+
+snippet newtype "A newtype" b
+final case class $1($2) extends AnyVal
 endsnippet
