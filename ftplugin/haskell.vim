@@ -13,6 +13,9 @@ set wildignore+=*/cabal-dev/*,*/dist/*,*.hi,.stack-work/*
 nnoremap <silent><space>f /\(data\\|type\\|class) \<<C-r><C-w>\>/I<cr>
 nnoremap <silent><space>gf :Unite -buffer-name=ack grep:.::(data\|type\|class)\ <C-r><C-w>\\b<cr>
 
+" We use hasktags, which support qualified tags
+nnoremap <C-]> :<C-u>call TagJumpDot()<CR>
+
 function! GetPackageForFile()
     let regexes = [
                 \   [ '/src/test',    '/src/test' ],
