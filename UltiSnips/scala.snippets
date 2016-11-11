@@ -5,7 +5,7 @@ endsnippet
 
 #test class
 snippet testclass "A Test class" b
-package `!v GetPackageForFile()`
+package$1
 
 import org.joda.time.{ DateTime, LocalDate }
 import org.mockito.Matchers.{ eq ⇒ meq, _ }
@@ -39,5 +39,26 @@ object $1 {
 endsnippet
 
 snippet newtype "A newtype" b
-final case class $1($2) extends AnyVal
+case class $1($2) extends AnyVal
+endsnippet
+
+snippet data "data" b
+case class $1($2)
+endsnippet
+
+snippet """ "Multi line string" b
+$1"""
+|$2
+""".stripMargin
+endsnippet
+
+snippet pl "Println debug"
+println("$1 ->\n\t" + $1)
+endsnippet
+
+snippet trace "traceShow" b
+def traceShow[A](a: A): A = {
+  println("==============\n\t" + a)
+  a
+}
 endsnippet
