@@ -25,7 +25,7 @@ ${1:class} `!v Classname()` ${2:{}}
 endsnippet
 
 snippet def "A private final def" b
-private final def 
+${1:private} def $2
 endsnippet
 
 snippet typeclass "A scala typeclass" b
@@ -46,6 +46,16 @@ snippet data "data" b
 case class $1($2)
 endsnippet
 
+snippet doc "scaladoc" b
+/**
+ * $1
+ */
+endsnippet
+
+snippet doci "@inhericdoc" b
+/** @inhericdoc */
+endsnippet
+
 snippet """ "Multi line string" b
 $1"""
 |$2
@@ -58,7 +68,7 @@ endsnippet
 
 snippet trace "traceShow" b
 def traceShow[A](a: A): A = {
-  println("==============\n\t" + a)
+  println("=========\n\t" + a)
   a
 }
 endsnippet
