@@ -26,3 +26,6 @@ function! GetPackageForFile()
                 \ ]
     return _GetPackageForFile(regexes)
 endfunction
+
+" Use stags' qualified tags
+nnoremap <silent> <C-]> :<C-u>call TagJumpDot()<CR>
