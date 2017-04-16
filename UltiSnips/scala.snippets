@@ -39,11 +39,11 @@ object $1 {
 endsnippet
 
 snippet newtype "A newtype" b
-case class $1($2) extends AnyVal
+final case class $1($2) extends AnyVal
 endsnippet
 
 snippet data "data" b
-case class $1($2)
+final case class $1($2)
 endsnippet
 
 snippet doc "scaladoc" b
