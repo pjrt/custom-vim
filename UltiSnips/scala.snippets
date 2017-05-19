@@ -63,12 +63,12 @@ $1"""
 endsnippet
 
 snippet pl "Println debug"
-println("$1 ->\n\t" + $1)
+println("$1 ->\n\t" + $1.toString)
 endsnippet
 
 snippet trace "traceShow" b
 def traceShow[A0](a: A0): A0 = {
-  println("=========\n\t" + a)
+  println("=========\n\t" + a.toString)
   a
 }
 endsnippet
@@ -78,3 +78,8 @@ sealed trait $1$2
 
 final case class $3 extends $1$2
 endsnippet
+
+snippet des "Desnote" b
+// DESNOTE(`!v strftime("%Y-%m-%d")`, `git config user.alias`): $1
+endsnippet
+
