@@ -9,6 +9,9 @@ noremap <silent> <Leader>fn :cn<CR>
 nnoremap <silent><space>f /\(def\\|val\\|class\\|trait\\|object\) \<<C-r><C-w>\>/I<cr>
 nnoremap <silent><space>gf :Unite -buffer-name=ack grep:.::(def\|class\|trait\|object)\ <C-r><C-w>\\b<cr>
 nnoremap <silent><space>ge :Unite -buffer-name=ack grep:.::(extends\|with)\ <C-r><C-w>\\b<cr>
+
+nnoremap <silent><space>i :SortScalaImports<CR>
+
 " class User
 " class UserName
 
